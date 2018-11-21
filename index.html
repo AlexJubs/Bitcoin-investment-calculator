@@ -19,13 +19,21 @@
     </style>
 
     <!-- angular module -->
-    <script type="text/javascript">
-      var bitcoinCalculator = angular.module('bitcoinCalculator', []);
-        bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
-          // attaching 0 to the DOM
-          $scope.somenumber = 0;
-        }]);
-    </script>
+  <script type="text/javascript">
+    var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+      bitcoinCalculator.controller('bitcoinController', function($scope, $http){
+        // calling the api, grabbing the value for USD, appending it to the dom
+        $http.get("https://bitpay.com/api/rates")
+        .success(function(data){
+          $scope.rates = data;
+          for(var i=0;i<data.length;i++){
+            if (data[i].code == "USD"){
+              $scope.currRate = data[i].rate;
+            }
+          }
+        });
+      });
+  </script>
   </head>
   <body>
 
@@ -34,13 +42,22 @@
 
       <h3>How many Bitcoins do you have?</h3>
       <!-- model -->
-      <input type="number" ng-model="somenumber" placeholder="20">
+      <form role="form">
+        <label for="starting-investment">Initial Investment (USD)</label>
+        <br>
+        <input type="number" ng-model="somenumber" placeholder="20">
+      </form>
+
       <br><br>
       <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
 
 
 
     <div class="jumbotron">
+
+<p>Current Price (USD): ${{currRate}}</p>
+
+
       <div class="row">
         <div class="col-sm-7">
           <br><br>
