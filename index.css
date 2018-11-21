@@ -1,4 +1,11 @@
 body {
-	background-color: pink;
+	background-color: lightslategrey;
 	text-align: center;
+	font-family: "Times New Roman", Times, serif;
 }
+
+h1 {
+	font-size: 500%;
+	font-style: normal;
+}
+
