@@ -34,24 +34,21 @@
           }
         });
       });
-      
+
   </script>
   </head>
   <body>
 
       <h1>Bitcoin Investment<br>Calculator</h1>
 
-
-      <h3>How many Bitcoins do you have?</h3>
+      <h3>How much USD are you willing to invest?</h3>
       <!-- model -->
       <form role="form">
-        <label for="starting-investment">Initial Investment (USD)</label>
-        <br>
-        <input type="number" ng-model="somenumber" placeholder="20">
+        <input type="number" ng-model="Money" placeholder="20">
       </form>
 
       <br><br>
-      <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
+      <h4>You have <span class="number">{{Money/currRate}}</span> Bitcoin - nice!</h4>
 
 
 
