@@ -1,27 +1,47 @@
+*{
+	background-color: whitesmoke;
+}
+
+
 body {
-	background-color: skyblue;
+	background-color: whitesmoke;
 	text-align: center;
-	font-family: "Times New Roman", Times, serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 }
 
 h1 {
-	font-size: 500%;
-	font-style: normal;
-	font-family: "Impact", Charcoal, sans-serif;
+	font-size: 65px; 
+	font-family: 'Roboto', sans-serif;
+	padding-top: 30px;
 }
+
+
 h3 {
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: 'Roboto', sans-serif;
+	color: black;
 }
 
 .jumbotron {
-	background-color: skyblue;
+	background-color: whitesmoke;
 	text-align: center;
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 900;
 	
 
 }
 
 .footer {
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: 'Roboto', sans-serif;
+}
+
+input{
+	text-align: center;
+	font-size: 30px;
+}
+
+#inputForm{
+	padding-top: 50px;
+	padding-right: 250px;
+	padding-left: 250px;
 }
