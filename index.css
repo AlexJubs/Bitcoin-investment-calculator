@@ -1,10 +1,11 @@
 *{
-	background-color: whitesmoke;
+	background-color: lightseagreen;
+	color: white;
 }
 
 
 body {
-	background-color: whitesmoke;
+	background-color: lightseagreen;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
@@ -19,11 +20,10 @@ h1 {
 
 h3 {
 	font-family: 'Roboto', sans-serif;
-	color: black;
 }
 
 .jumbotron {
-	background-color: whitesmoke;
+	background-color: lightseagreen;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 900;
@@ -37,11 +37,11 @@ h3 {
 
 input{
 	text-align: center;
-	font-size: 30px;
+	background-color: lightseagreen;
+
 }
 
 #inputForm{
-	padding-top: 50px;
-	padding-right: 250px;
-	padding-left: 250px;
+	padding-right: 500px;
+	padding-left: 500px;
 }
