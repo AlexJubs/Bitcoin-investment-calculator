@@ -22,17 +22,19 @@
   <script type="text/javascript">
     var bitcoinCalculator = angular.module('bitcoinCalculator', []);
       bitcoinCalculator.controller('bitcoinController', function($scope, $http){
-        // calling the api, grabbing the value for USD, appending it to the dom
+
+        // We call the api, and retreive the value for USD, appending it to the dom
         $http.get("https://bitpay.com/api/rates")
         .success(function(data){
           $scope.rates = data;
-          for(var i=0;i<data.length;i++){
-            if (data[i].code == "USD"){
-              $scope.currRate = data[i].rate;
+          for(var k = 0; k < data.length;k++){
+            if (data[k].code == "USD"){
+              $scope.currRate = data[k].rate;
             }
           }
         });
       });
+      
   </script>
   </head>
   <body>
