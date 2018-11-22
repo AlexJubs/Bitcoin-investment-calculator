@@ -16,7 +16,10 @@ h3 {
 .jumbotron {
 	background-color: skyblue;
 	text-align: center;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-weight: 900;
+	
+
 }
 
 .footer {
