@@ -87,40 +87,40 @@
               <tr>
                 <th>If you sell your BTC when the price of 1 BTC is:</th>
                 <th>You will start with:</th>
-                <th>Then your starting Investment will be:</th>
+                <th>Your Investment will be:</th>
                 <th>Your profit will be: </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>$1,000</td>
-                <td>{{Money}}</td>
-                <td>{{ newAmt(1000)*(Money/currRate) }}</td>
-                <td>{{ profit(1000)*(Money/currRate) }}</td>
+                <td>${{Money}}</td>
+                <td>$ {{newAmt(1000)*(Money/currRate) }}</td>
+                <td>$ {{newAmt(1000)*(Money/currRate) }}</td>
               </tr>
               <tr>
                 <td>$5,000</td>
-                <td>{{Money}}</td>
-                <td>{{ newAmt(5000)*(Money/currRate) }}</td>
-                <td>{{ profit(5000)*(Money/currRate) }}</td>
+                <td>${{Money}}</td>
+                <td>${{ newAmt(5000)*(Money/currRate) }}</td>
+                <td>${{ profit(5000)*(Money/currRate) }}</td>
               </tr>
               <tr>
                 <td>$10000</td>
-                <td>{{Money}}</td>
-                <td>{{ newAmt(10000)*(Money/currRate) }}</td>
-                <td>{{ profit(10000)*(Money/currRate) }}</td>
+                <td>${{Money}}</td>
+                <td>${{ newAmt(10000)*(Money/currRate) }}</td>
+                <td>${{ profit(10000)*(Money/currRate) }}</td>
               </tr>
               <tr>
                 <td>$25,000</td>
-                <td>{{Money}}</td>
-                <td>{{ newAmt(25000)*(Money/currRate) }}</td>
-                <td>{{ profit(25000)*(Money/currRate) }}</td>
+                <td>${{Money}}</td>
+                <td>${{ newAmt(25000)*(Money/currRate) }}</td>
+                <td>${{ profit(25000)*(Money/currRate) }}</td>
               </tr>
               <tr>
                 <td>$50,000</td>
-                <td>{{Money}}</td>
-                <td>{{ newAmt(50000)*(Money/currRate) }}</td>
-                <td>{{ profit(50000)*(Money/currRate) }}</td>
+                <td>${{Money}}</td>
+                <td>${{ newAmt(50000)*(Money/currRate) }}</td>
+                <td>${{ profit(50000)*(Money/currRate) }}</td>
               </tr>
             </tbody>
           </table>
