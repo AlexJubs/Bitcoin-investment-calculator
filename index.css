@@ -1,18 +1,18 @@
 *{
-	background-color: lightseagreen;
-	color: white;
+	background-color: white;
+	color: lightseagreen;
 }
 
 
 body {
-	background-color: lightseagreen;
+	background-color: white;;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 }
 
 h1 {
-	color: white;
+	color: lightseagreen;
 	font-size: 65px; 
 	font-family: 'Roboto', sans-serif;
 	padding-top: 30px;
@@ -20,7 +20,7 @@ h1 {
 
 
 h3 {
-	color: white;
+	color: lightseagreen;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -33,9 +33,21 @@ h3 {
 
 }
 
-h4{
+p{
 	color: white;
+	background-color: lightseagreen;
+}
+
+h4{
+	color: lightseagreen;
+	margin-top: 0;
+	padding-top: 0;
 	padding-bottom: 30px;
+}
+
+.form-group{
+	border-radius: 10%;
+	border-width: 0;
 }
 
 .footer {
@@ -52,5 +64,27 @@ input{
 	padding-top: 25px;
 	padding-right: 500px;
 	padding-left: 500px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 
+
+table{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.top{
+	background-color: white;
+}
+.row{
+	background-color: lightseagreen;
+}
+
+.col-sm-5{
+	background-color: lightseagreen;
+}
+
+img{
+	border-radius: 100%;
+}
