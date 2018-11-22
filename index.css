@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+	color: white;
 	font-size: 65px; 
 	font-family: 'Roboto', sans-serif;
 	padding-top: 30px;
@@ -19,6 +20,7 @@ h1 {
 
 
 h3 {
+	color: white;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -27,8 +29,13 @@ h3 {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 900;
-	
+	color: white;
 
+}
+
+h4{
+	color: white;
+	padding-bottom: 30px;
 }
 
 .footer {
@@ -42,6 +49,8 @@ input{
 }
 
 #inputForm{
+	padding-top: 25px;
 	padding-right: 500px;
 	padding-left: 500px;
 }
+
