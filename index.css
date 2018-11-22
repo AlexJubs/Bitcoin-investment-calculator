@@ -68,10 +68,26 @@ input{
 	margin-bottom: 0px;
 }
 
+p{
+	font-weight: 900;
+}
+
+.col-sm-7{
+	padding: 0;
+}
+
+.row{
+	padding: 0;
+}
+
+tbody{
+	padding: 0;
+}
 
 table{
-	padding-right: 30px;
-	padding-left: 30px;
+	font-size: 18px;
+	padding: 0;
+	background-color: lightseagreen;
 }
 
 .top{
