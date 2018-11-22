@@ -16,6 +16,12 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 
+
+    <!-- Angular scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-nvd3-directives/0.0.7/angularjs-nvd3-directives.min.js"></script>
+
     <style>
       .number {font-weight: bold;}
     </style>
@@ -51,7 +57,7 @@
 
   <body>
 
-      <h1>Bitcoin Investment<br>Calculator</h1>
+      <h1>Bitcoin Investment Calculator</h1>
 
       <h3>How much USD are you willing to invest?</h3>
       <!-- model -->
@@ -62,11 +68,11 @@
       </form>
 
       <br><br>
-      <h4>You have <span class="number">{{Money/currRate}}</span> Bitcoin - nice!</h4>
+      <h4>You will be investing <span class="number">{{Money/currRate}}</span> Bitcoin - nice!</h4>
 
     <div class="jumbotron">
 
-<p>Current Price (USD): ${{currRate}}</p>
+<p>Current Price of bitcoin in USD: ${{currRate}}</p>
 
       <div class="row">
         <div class="col-sm-7">
@@ -114,6 +120,10 @@
         </div>
       </div>
     </div>
+      
+      <div class="footer">
+        <p>Developed By Dhruva Rajkumar, Alex Jabbour, Serena Kam and Nathan Au</p>
+      </div> 
 
     <style>
       .footer {
@@ -125,11 +135,7 @@
           color: white;
           text-align: center;
       }
-      </style>
-      
-      <div class="footer">
-        <p>Developed By Dhruva Rajkumar, Alex Jabbour, Serena Kam and Nathan Au</p>
-      </div> 
+    </style>
 
   </body>
 </html>
