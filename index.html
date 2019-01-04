@@ -91,34 +91,34 @@
             </thead>
             <tbody>
               <tr>
-                <td>1,000</td>
-                <td>{{Money}}</td>
-                <td> {{Money*(1000/currRate(currency))}}</td>
-                <td> {{Money*(1000/currRate(currency)) - Money }}</td>
+                <td>{{currency_symbol(currency)}} 1,000</td>
+                <td>{{currency_symbol(currency)}} {{Money}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(1000/currRate(currency))}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(1000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>5,000</td>
-                <td>${{Money}}</td>
-                <td>$ {{Money*(5000/currRate(currency))}}</td>
-                <td>$ {{Money*(5000/currRate(currency)) - Money }}</td>
+                <td>{{currency_symbol(currency)}} 5,000</td>
+                <td>{{currency_symbol(currency)}} {{Money}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(5000/currRate(currency))}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(5000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>10,000</td>
-                <td>${{Money}}</td>
-                <td>$ {{Money*(10000/currRate(currency))}}</td>
-                <td>$ {{Money*(10000/currRate(currency)) - Money }}</td>
+                <td>{{currency_symbol(currency)}} 10,000</td>
+                <td>{{currency_symbol(currency)}} {{Money}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(10000/currRate(currency))}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(10000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>25,000</td>
-                <td>${{Money}}</td>
-                <td>$ {{Money*(25000/currRate(currency))}}</td>
-                <td>$ {{Money*(25000/currRate(currency)) - Money }}</td>
+                <td>{{currency_symbol(currency)}} 25,000</td>
+                <td>{{currency_symbol(currency)}} {{Money}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(25000/currRate(currency))}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(25000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>$50,000</td>
-                <td>${{Money}}</td>
-                <td>$ {{Money*(50000/currRate(currency))}}</td>
-                <td>$ {{Money*(50000/currRate(currency)) - Money }}</td>
+                <td>{{currency_symbol(currency)}} 50,000</td>
+                <td>{{currency_symbol(currency)}} {{Money}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(50000/currRate(currency))}}</td>
+                <td>{{currency_symbol(currency)}} {{Money*(50000/currRate(currency)) - Money }}</td>
               </tr>
             </tbody>
           </table>
