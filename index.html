@@ -24,61 +24,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-nvd3-directives/0.0.7/angularjs-nvd3-directives.min.js"></script>
 
     <style>
-      .number {font-weight: bold;}
     </style>
-
-    <!-- angular module -->
-  <script type="text/javascript">
-    var bitcoinCalculator = angular.module('bitcoinCalculator', []);
-      bitcoinCalculator.controller('bitcoinController', function($scope, $http){
-
-        // We call the api, and retreive the value for USD. We then append it to the DOM
-
-        $http.get("https://bitpay.com/api/rates")
-        .success(function(data){
-          $scope.rates = data;
-          for(var k = 0; k < data.length;k++){
-            if (data[k].code == "USD"){
-              $scope.currRate = data[k].rate;
-            }
-          }
-          $scope.initialAmt  = 5000;
-          $scope.newAmt = function(price){
-              return price/$scope.currRate * $scope.initialAmt;
-            }
-          $scope.profit = function(price){
-              return price/$scope.currRate * $scope.initialAmt - $scope.initialAmt;
-            }
-        });
-      });
-
-  </script>
-
   </head>
 
   <body>
 
-      <h1>Bitcoin Investment Calculator</h1>
+      <h1><u>Bitcoin Investment Calculator</u></h1>
 
-      <h3>How much USD are you willing to invest?</h3>
+        <h3> Which currency are you buying bitcoin with?</h3>
+        <select name="currencies" ng-model="currency">
+          <option value="USD ($)">USD ($)</option>
+          <option value="EUR (€)">EUR (€)</option>
+          <option value="GPB (£)">GPB (£)</option>
+          <option value="JPY (¥)">JPY (¥)</option>
+          <option value="CAD ($)">CAD ($)</option>
+        </select>
+
+      <h3>How much {{currency}} are you willing to invest?</h3>
       <!-- model -->
       <form role="form" id ="inputForm">
         <div class="form-group">
-            <input class = "form-control" type="number" ng-model="Money" placeholder="0">
+            <input class = "form-control" min="0" type="number" ng-model="Money" placeholder="0">
         </div>
+
+
       </form>
+
+      <br>
 
       <img src="btc.png" style="width:100px; height:100px;">
 
       <br><br>
-      <h4>You will be investing <span class="number">{{Money/currRate}}</span> Bitcoin - nice!</h4>
+      <h4>You will be investing <span class="number">{{Money/currRate(currency)}}</span> Bitcoin - nice!</h4>
 
     <div class="jumbotron">
 
-<p>Current Price of bitcoin in USD: ${{currRate}}</p>
+<p>Current Price of bitcoin in {{currency}}: {{currRate(currency)}}</p>
 
-<p>Based on the current price of BTC:</p>
-<p>(all figures are in USD)</p>
+<p>all figures are in {{currency}}</p>
+
+
+      <h3 style="color:white; background-color: lightseagreen">At what price of Bitcoin are you thinking of selling your investment?</h3>
+      <!-- model -->
+
+    <div style="width: 200px; text-align:center;">
+      <form role="form" style="width: 200px; text-align:center;">
+        <div class="form-group" style="text-align: center;">
+            <input class = "form-control" min="0" type="number" ng-model="Selling_Price" placeholder="0">
+        </div>
+      </form>
+    </div>
+
+
+    <p>Based on the current price of BTC:</p>
 
 
       <div class="row" style="margin-left: auto; margin-right: auto; color: white; background-color: lightseagreen;">
@@ -87,40 +85,40 @@
               <tr>
                 <th>If you sell your BTC when the price of 1 BTC is:</th>
                 <th>You will start with:</th>
-                <th>Your Investment will be:</th>
+                <th>Your share of Bitcoin will be:</th>
                 <th>Your profit will be: </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>$1,000</td>
-                <td>${{Money}}</td>
-                <td>$ {{newAmt(1000)*(Money/currRate) }}</td>
-                <td>$ {{newAmt(1000)*(Money/currRate) }}</td>
+                <td>1,000</td>
+                <td>{{Money}}</td>
+                <td> {{Money*(1000/currRate(currency))}}</td>
+                <td> {{Money*(1000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>$5,000</td>
+                <td>5,000</td>
                 <td>${{Money}}</td>
-                <td>${{ newAmt(5000)*(Money/currRate) }}</td>
-                <td>${{ profit(5000)*(Money/currRate) }}</td>
+                <td>$ {{Money*(5000/currRate(currency))}}</td>
+                <td>$ {{Money*(5000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>$10000</td>
+                <td>10,000</td>
                 <td>${{Money}}</td>
-                <td>${{ newAmt(10000)*(Money/currRate) }}</td>
-                <td>${{ profit(10000)*(Money/currRate) }}</td>
+                <td>$ {{Money*(10000/currRate(currency))}}</td>
+                <td>$ {{Money*(10000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
-                <td>$25,000</td>
+                <td>25,000</td>
                 <td>${{Money}}</td>
-                <td>${{ newAmt(25000)*(Money/currRate) }}</td>
-                <td>${{ profit(25000)*(Money/currRate) }}</td>
+                <td>$ {{Money*(25000/currRate(currency))}}</td>
+                <td>$ {{Money*(25000/currRate(currency)) - Money }}</td>
               </tr>
               <tr>
                 <td>$50,000</td>
                 <td>${{Money}}</td>
-                <td>${{ newAmt(50000)*(Money/currRate) }}</td>
-                <td>${{ profit(50000)*(Money/currRate) }}</td>
+                <td>$ {{Money*(50000/currRate(currency))}}</td>
+                <td>$ {{Money*(50000/currRate(currency)) - Money }}</td>
               </tr>
             </tbody>
           </table>
@@ -128,8 +126,8 @@
 
     </div>
       
-      <div style="background-color: lightseagreen; " class="footer">
-        <p>Developed By Dhruva Rajkumar, Alex Jabbour, Serena Kam and Nathan Au</p>
+      <div style="background-color: green;" class="footer">
+        <p style="background-color: green;">Developed By Alex Jabbour, Dhruva Rajkumar and Nathan Au</p>
       </div> 
 
     <style>
@@ -142,6 +140,13 @@
           text-align: center;
       }
     </style>
+
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 
   </body>
 </html>
