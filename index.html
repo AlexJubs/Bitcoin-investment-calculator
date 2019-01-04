@@ -41,13 +41,11 @@
         </select>
 
       <h3>How much {{currency}} are you willing to invest?</h3>
-      <!-- model -->
+
       <form role="form" id ="inputForm">
         <div class="form-group">
             <input class = "form-control" min="0" type="number" ng-model="Money" placeholder="0">
         </div>
-
-
       </form>
 
       <br>
@@ -59,21 +57,33 @@
 
     <div class="jumbotron">
 
-<p>Current Price of bitcoin in {{currency}}: {{currRate(currency)}}</p>
+    <p>Current Price of bitcoin in {{currency}}: {{currRate(currency)}}</p>
 
       <h3 style="color:white; background-color: lightseagreen">At what price of Bitcoin are you thinking of selling your investment?</h3>
-      <!-- model -->
 
-    <div style="width: 100px; text-align:center;">
-      <form role="form" style="text-align:center;">
-        <div class="form-group" style="text-align: center;">
+      <form role="form" id ="inputForm">
+        <div class="form-group">
             <input class = "form-control" min="0" type="number" ng-model="Selling_Price" placeholder="0">
         </div>
       </form>
-    </div>
 
 
-    <p>Based on the current price of BTC:</p>
+    <p>- Based on the current price of BTC -</p>
+        <table class="container">
+          <thead>
+            <tr style="font-family: 'Roboto', sans-serif;">
+              <th><h1>You Will sell your bitcoin for:</h1></th>
+              <th><h1>Your profit will be:</h1></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>{{Selling_Price}} BTC</td>
+                <td>{{currency_symbol(currency)}} {{Money*(Selling_Price/currRate(currency)) - Money }}</td>
+            </tr>
+
+          </tbody>
+        </table>
 
         <table class="container">
           <thead>
@@ -91,6 +101,7 @@
                 <td>{{currency_symbol(currency)}} {{Money*(1000/currRate(currency))}}</td>
                 <td>{{currency_symbol(currency)}} {{Money*(1000/currRate(currency)) - Money }}</td>
             </tr>
+            <br><br><br>
             <tr>
                 <td>{{currency_symbol(currency)}} 5,000</td>
                 <td>{{currency_symbol(currency)}} {{Money}}</td>
@@ -102,12 +113,6 @@
                 <td>{{currency_symbol(currency)}} {{Money}}</td>
                 <td>{{currency_symbol(currency)}} {{Money*(10000/currRate(currency))}}</td>
                 <td>{{currency_symbol(currency)}} {{Money*(10000/currRate(currency)) - Money }}</td>
-            </tr>
-            <tr>
-                <td>{{currency_symbol(currency)}} 25,000</td>
-                <td>{{currency_symbol(currency)}} {{Money}}</td>
-                <td>{{currency_symbol(currency)}} {{Money*(25000/currRate(currency))}}</td>
-                <td>{{currency_symbol(currency)}} {{Money*(25000/currRate(currency)) - Money }}</td>
             </tr>
             <tr>
                 <td>{{currency_symbol(currency)}} 25,000</td>
