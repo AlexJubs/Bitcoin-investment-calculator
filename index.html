@@ -7,21 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.css">
-
-    <!-- scripts -->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-
-
-    <!-- Angular scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-nvd3-directives/0.0.7/angularjs-nvd3-directives.min.js"></script>
 
     <style>
     </style>
@@ -29,7 +18,7 @@
 
   <body>
 
-      <h1><u>Bitcoin Investment Calculator</u></h1>
+      <h1>Bitcoin Investment Calculator</h1>
 
         <h3> Which currency are you buying bitcoin with?</h3>
         <select name="currencies" ng-model="currency">
@@ -71,8 +60,8 @@
     <p>- Based on the current price of BTC -</p>
         <table class="container">
           <thead>
-            <tr style="font-family: 'Roboto', sans-serif;">
-              <th><h1>You Will sell your bitcoin for:</h1></th>
+            <tr>
+              <th><h1>You will sell your bitcoin for:</h1></th>
               <th><h1>Your profit will be:</h1></th>
             </tr>
           </thead>
@@ -85,9 +74,10 @@
           </tbody>
         </table>
 
+
         <table class="container">
           <thead>
-            <tr style="font-family: 'Roboto', sans-serif;">
+            <tr>
               <th><h1>If you sell your BTC when the price of 1 BTC is:</h1></th>
               <th><h1>You will start with:</h1></th>
               <th><h1>You will sell your bitcoin for:</h1></th>
@@ -129,10 +119,17 @@
           </tbody>
         </table>
 
-
-
     </div>
-      
+
+    <div>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <nvd3-historical-bar-chart height="350" data="exampleData" showXAxis="true" showYAxis="true" showLegend="true">
+          </nvd3-historical-bar-chart>
+        </div>
+      </div>
+    </div>
+    
       <div style="background-color: green;" class="footer">
         <p style="background-color: green;">Developed By Alex Jabbour, Dhruva Rajkumar and Nathan Au</p>
       </div> 
@@ -153,6 +150,11 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-nvd3-directives/0.0.7/angularjs-nvd3-directives.min.js"></script>
+
     <script type="text/javascript" src="index.js"></script>
 
   </body>

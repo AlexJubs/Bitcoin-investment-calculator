@@ -1,31 +1,22 @@
-* {
-	font-family: 'Roboto', sans-serif;
-}
-
 body {
 	background-color: white;;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
 }
 
 h1 {
 	color: lightseagreen;
 	font-size: 65px; 
-	font-family: 'Roboto', sans-serif;
 	padding-top: 30px;
 }
 
-
 h3 {
 	color: lightseagreen;
-	font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron {
 	background-color: lightseagreen;
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
 	font-weight: 900;
 	color: white;
 
@@ -52,7 +43,7 @@ h4{
 	border-width: 0;
 }
 
-.footer {
+#footer {
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -60,6 +51,10 @@ input{
 	text-align: center;
 	background-color: lightseagreen;
 
+}
+
+* {
+	font-family: 'Oswald', sans-serif;
 }
 
 #inputForm{

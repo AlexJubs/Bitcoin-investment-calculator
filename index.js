@@ -1,4 +1,5 @@
-var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+var bitcoinCalculator = angular.module('bitcoinCalculator', ['nvd3ChartDirectives']);
+
   bitcoinCalculator.controller('bitcoinController', function($scope, $http){
 
     // calling the api, grabbing the value for all the currencies, appending it to the DOM
@@ -59,6 +60,18 @@ var bitcoinCalculator = angular.module('bitcoinCalculator', []);
           return "¥";
         }
       }
-
     });
-  });
+
+    $scope.exampleData = [{
+    "key": "Quantity",
+    "bar": true,
+    "values": [
+      [10, 20],
+      [20, 40],
+      [30, 60],
+      [40, 80],
+      [50, 100]
+    ]
+  }];
+  
+});
